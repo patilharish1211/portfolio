@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,11 +22,29 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a server here
-    console.log('Form submitted:', formData);
-    setFormSubmitted(true);
-    
-    // Reset form after submission
+
+    emailjs.send(
+      'YOUR_SERVICE_ID',        // 🔁 Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID',       // 🔁 Replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'YOUR_PUBLIC_KEY'         // 🔁 Replace with your EmailJS public key
+    ).then(
+      (result) => {
+        console.log('Email sent:', result.text);
+        setFormSubmitted(true);
+      },
+      (error) => {
+        console.error('Email error:', error.text);
+        alert('Failed to send message. Please try again.');
+      }
+    );
+
+    // Reset form after 3 seconds
     setTimeout(() => {
       setFormData({
         name: '',
@@ -55,7 +74,7 @@ const Contact = () => {
             </div>
             <div className="contact-details">
               <h3>Phone</h3>
-              <p>+90 555 123 4567</p>
+              <p>+91 87990 92846</p>
             </div>
           </div>
           
@@ -65,7 +84,7 @@ const Contact = () => {
             </div>
             <div className="contact-details">
               <h3>Email</h3>
-              <p>aabraham.james@example.com</p>
+              <p>patilharish1211@gmail.com</p>
             </div>
           </div>
           
@@ -75,7 +94,7 @@ const Contact = () => {
             </div>
             <div className="contact-details">
               <h3>Location</h3>
-              <p>Istanbul, Turkey</p>
+              <p>Surat, Gujarat, India</p>
             </div>
           </div>
           

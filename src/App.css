@@ -1251,3 +1251,132 @@ textarea.form-control {
  .resume-preview {
     margin-left: 100px;
  }
+
+
+
+
+
+
+
+
+ .nav-item {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e1e1e;
+  color: #8a56ff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.nav-item:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+
+/* .nav-icon {
+  font-size: 22px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.1);
+} */
+
+
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.7rem;
+  padding: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.tech-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid #7f5af0;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px #7f5af0;
+  /* border: 2px solid #7f5af0; */
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+
+
+
+.tech-card::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #a855f7; /* Soft purple */
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+
+.tech-container {
+  position: relative;
+  z-index: 0;
+  overflow: visible; /* 🔥 this allows tooltips to appear outside the grid */
+}
+
+
+.tech-card {
+  position: relative;
+  z-index: 2; /* ensures the tooltip appears above others */
+}
+
+
+.tech-card:hover {
+  z-index: 3;
+}

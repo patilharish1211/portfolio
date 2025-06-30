@@ -59,7 +59,8 @@ const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
   // Categories for filter
-  const categories = ['All', 'Web Design', 'Mobile App', 'Branding', 'Web App'];
+  const categories = ['All', 'Web Design', 'Mobile App', 'Branding', 'Web App', 'Others'];
+  // const categories = ['All', 'HTML/CSS/BT', 'JavaScript', 'React', 'Others']; sun harish yaha par na ek error he. ye jo tune naam change kiye na technologies ke jisme tune projects banaye he yaha par jo tere properly work nhi kr raha he to ek baar chatGpt se puch ki mene technologies change ki he to work nhi kr raha he !!
 
   // Handle filter change
   const handleFilterClick = (category) => {

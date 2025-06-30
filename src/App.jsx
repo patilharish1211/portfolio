@@ -1,7 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
-import { FiHome, FiUser, FiBriefcase, FiFileText, FiMail } from 'react-icons/fi';
+import { FiHome, FiUser, FiBriefcase, FiFileText, FiMail, FiCpu } from 'react-icons/fi';
 import './App.css';
+import mine from '../src/assets/Mine.jpg'
 
 // Import pages
 import Home from './pages/Home';
@@ -10,7 +11,7 @@ import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Technology from './pages/Technology'
- 
+
 function App() {
   return (
     <Router>
@@ -18,28 +19,34 @@ function App() {
         <nav className="navbar">
           <NavLink to="/" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
             <FiHome className="nav-icon" />
+            <span className="tooltip">Home</span>
           </NavLink>
           <NavLink to="/about" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
             <FiUser className="nav-icon" />
+            <span className="tooltip">About</span>
           </NavLink>
           <NavLink to="/projects" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
             <FiBriefcase className="nav-icon" />
+            <span className="tooltip">Projects</span>
           </NavLink>
           <NavLink to="/resume" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
             <FiFileText className="nav-icon" />
+            <span className="tooltip">Resume</span>
           </NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
             <FiMail className="nav-icon" />
+            <span className="tooltip">Contact</span>
           </NavLink>
           <NavLink to="/technology" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
-            <FiHome className="nav-icon" />
+            <FiCpu className="nav-icon" />
+            <span className="tooltip">Tech</span>
           </NavLink>
         </nav>
 
         <div className="content">
           <div className="profile-card">
             <div className="profile-img">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Profile" />
+              <img src={mine} alt="Profile" />
             </div>
             <h1 className="profile-title">Patil Harish</h1>
             <p className="profile-location">Gujarat, India</p>

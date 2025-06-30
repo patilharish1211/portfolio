@@ -1,4 +1,5 @@
 import React from 'react';
+import me from '../assets/Mine.jpg'
 
 const About = () => {
   return (
@@ -10,15 +11,16 @@ const About = () => {
 
       <div className="about-content">
         <div className="about-image">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Profile" />
+          <img src={me} alt="Profile" style={{height: '500px'}} />
         </div>
         
         <div className="about-text">
           <h2>Patil Harish</h2>
-          <h3>Product Designer & Developer</h3>
+          <h3>Developer & Designer</h3>
           
           <p>
-            I am a passionate product designer and developer with over 12 years of experience in creating intuitive and engaging user experiences. My journey in the digital world began when I discovered my passion for transforming ideas into beautifully crafted products.
+            {/* I am a passionate product designer and developer with over 12 years of experience in creating intuitive and engaging user experiences. My journey in the digital world began when I discovered my passion for transforming ideas into beautifully crafted products. */}
+            I'm a Full Stack Developer with the soul of a UI/UX designer — writing clean code by day and sketching seamless experiences by night. I don’t just build web apps; I craft digital journeys that are fast, responsive, and intuitive to the core. For me, great tech is nothing without great design. I’m forever exploring, forever refining — turning complex ideas into beautifully simple solutions that users love to click.
           </p>
           
           <p>
@@ -31,7 +33,7 @@ const About = () => {
               <div className="skill-item">
                 <span className="skill-name">UI/UX Design</span>
                 <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: '95%' }}></div>
+                  <div className="skill-progress" style={{ width: '80%' }}></div>
                 </div>
               </div>
               
@@ -43,16 +45,9 @@ const About = () => {
               </div>
               
               <div className="skill-item">
-                <span className="skill-name">Mobile App Design</span>
+                <span className="skill-name">Other Tools</span>
                 <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: '85%' }}></div>
-                </div>
-              </div>
-              
-              <div className="skill-item">
-                <span className="skill-name">Branding</span>
-                <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: '80%' }}></div>
+                  <div className="skill-progress" style={{ width: '73%' }}></div>
                 </div>
               </div>
             </div>
@@ -61,12 +56,16 @@ const About = () => {
           <div className="education">
             <h3>Education</h3>
             <div className="education-item">
-              <h4>Master of Design</h4>
-              <p>Istanbul Design Institute, 2010-2012</p>
+              <h4>MERN Stack & UI/UX Course.</h4>
+              <p>Red and White Skill Education, 2024-2025</p>
             </div>
             <div className="education-item">
-              <h4>Bachelor of Computer Science</h4>
-              <p>Istanbul Technical University, 2006-2010</p>
+              <h4>Diploma in Computer Engineering.</h4>
+              <p>Swarrnim Startup & Innovation University, 2024-2026</p>
+            </div>
+            <div className="education-item">
+              <h4>HIGHER SECONDARY.</h4>
+              <p>Gyanmanjari Vidyapeeth, 2022-2023</p>
             </div>
           </div>
         </div>

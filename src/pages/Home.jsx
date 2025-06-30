@@ -1,8 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiMail, FiPhone, FiMapPin, FiSend, FiDownload, FiAward, FiBriefcase, FiBook, FiExternalLink } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiSend, FiDownload, FiBook, FiExternalLink } from 'react-icons/fi';
 import { Typewriter } from 'react-simple-typewriter';
 // import 'react-simple-typewriter/dist/index.css'
+import me from '../assets/Mine.jpg'
 
 const Home = () => {
   // Sample project data for featured projects
@@ -38,26 +39,26 @@ const Home = () => {
       {/* Hero Section */}
       <div className="header">
 
-        <div className='typewriter-effect' style={{fontFamily: 'monospace'}}>
+        <div className='typewriter-effect' style={{ fontFamily: 'monospace' }}>
           <h2>
             # I’m a{' '}
             <span style={{ color: '#8a56ff', fontStyle: 'revert' }}>
               <i>
                 <Typewriter
-                words={[
-                  'Full Stack Web Developer.',
-                  'UI/UX Designer.',
-                  'Programmer.',
-                  'Front-End Developer.',
-                  'Back-End Developer.'
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={100}
-                deleteSpeed={60}
-                delaySpeed={1000}
-              />
+                  words={[
+                    'Full Stack Web Developer.',
+                    'UI/UX Designer.',
+                    'Programmer.',
+                    'Front-End Developer.',
+                    'Back-End Developer.'
+                  ]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={100}
+                  deleteSpeed={60}
+                  delaySpeed={1000}
+                />
               </i>
             </span>
           </h2>
@@ -84,7 +85,7 @@ const Home = () => {
 
         <div className="about-content">
           <div className="about-image">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Profile" />
+            <img src={me} alt="Profile" />
           </div>
 
           <div className="about-text">
@@ -93,7 +94,7 @@ const Home = () => {
 
             <p>
               {/* I am a passionate product designer and developer with over 12 years of experience in creating intuitive and engaging user experiences. My journey in the digital world began when I discovered my passion for transforming ideas into beautifully crafted products. */}
-                Full Stack Developer with a passion for clean code, modern technologies, and intuitive UI/UX design. I enjoy building fast, responsive web applications that deliver great user experiences. Constantly exploring, learning, and creating better digital solutions.
+              Full Stack Developer with a passion for clean code, modern technologies, and intuitive UI/UX design. I enjoy building fast, responsive web applications that deliver great user experiences. Constantly exploring, learning, and creating better digital solutions.
             </p>
 
             <div className="skills-preview">
@@ -149,7 +150,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Resume Preview Section */}
+      {/* Resume Section */}
       <div className="home-section resume-section">
         <div className="section-header">
           <h2 className="section-title">My <span className="highlight">Resume</span></h2>
@@ -168,10 +169,10 @@ const Home = () => {
               <div className="timeline-preview">
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
-                  <div className="timeline-date">2024 - 2026</div>
+                  <div className="timeline-date">2024 - 2025</div>
                   <div className="timeline-content">
                     <h4>MERN Stack & UI/UX Course</h4>
-                    <h5>Istanbul Design Institute</h5>
+                    <h5>Red and White Skill Education.</h5>
                   </div>
                 </div>
 
@@ -180,7 +181,7 @@ const Home = () => {
                   <div className="timeline-date">2024 - 2026</div>
                   <div className="timeline-content">
                     <h4>Diploma in Computer Engineering</h4>
-                    <h5>Swarrnim Startup & Innovation University</h5>
+                    <h5>Swarrnim Startup & Innovation University.</h5>
                   </div>
                 </div>
 
@@ -189,7 +190,37 @@ const Home = () => {
                   <div className="timeline-date">2022 - 2023</div>
                   <div className="timeline-content">
                     <h4>HIGHER SECONDARY</h4>
-                    <h5>Gyanmanjari Vidhyalay</h5>
+                    <h5>Gyanmanjari Vidyapeeth.</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="resume-column">
+            <div className="resume-preview-section">
+              <div className="section-header">
+                <FiBook className="section-icon" />
+                <h3>Certifications</h3>
+              </div>
+
+              <div className="timeline-preview">
+                <div className="timeline-item">
+                  <div className="timeline-dot"></div>
+                  <div className="timeline-date">2024</div>
+                  <div className="timeline-content">
+                    <h4><a href="https://drive.google.com/file/d/18DeDwvG2zUszqUGitNI_tdGc3oCgkS9A/view?usp=sharing" style={{ textDecoration: 'none' }}>Hackathon Participant - Techwar</a></h4>
+                    <h5>Red and White Skill Education.</h5>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="timeline-dot"></div>
+                  <div className="timeline-date">2024</div>
+                  <div className="timeline-content">
+                    <h4>Integrated Personality Development Course IPDC</h4>
+                    {/* Integrated Personality Development Course (IPDC) */}
+                    <h5>Red and White Skill Education.</h5>
                   </div>
                 </div>
               </div>
@@ -198,9 +229,11 @@ const Home = () => {
         </div>
 
         <div className="resume-cta">
-          <button className="download-btn">
-            <FiDownload /> Download CV
-          </button>
+          <a href="../assets/HARISH PATIL FRONT-END DEVELOPER.pdf.pdf" download>
+            <button className="download-btn">
+              <FiDownload /> Download CV
+            </button>
+          </a>
         </div>
       </div>
 
@@ -219,7 +252,7 @@ const Home = () => {
               </div>
               <div className="contact-details">
                 <h3>Phone</h3>
-                <p>+90 555 123 4567</p>
+                <p>+91 87990 92846</p>
               </div>
             </div>
 
@@ -229,7 +262,7 @@ const Home = () => {
               </div>
               <div className="contact-details">
                 <h3>Email</h3>
-                <p>aabraham.james@example.com</p>
+                <p>patilharish1211@gmail.com</p>
               </div>
             </div>
 
@@ -239,7 +272,7 @@ const Home = () => {
               </div>
               <div className="contact-details">
                 <h3>Location</h3>
-                <p>Istanbul, Turkey</p>
+                <p>Gujarat, India</p>
               </div>
             </div>
           </div>
