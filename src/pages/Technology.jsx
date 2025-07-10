@@ -15,7 +15,7 @@ import git from '../assets/tech_imgs/Git.png'
 import shopify from '../assets/tech_imgs/Shopify.png'
 import liquid from '../assets/tech_imgs/Liquid.png'
 import figma from '../assets/tech_imgs/Figma.png'
-import photoshop from '../assets/tech_imgs/Photoshop.png'
+import photoshop from '../assets/tech_imgs/PhotoShop.png'
 import canva from '../assets/tech_imgs/Canva.png'
 
 
