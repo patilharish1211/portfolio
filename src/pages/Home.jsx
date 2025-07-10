@@ -4,33 +4,36 @@ import { FiMail, FiPhone, FiMapPin, FiSend, FiDownload, FiBook, FiExternalLink }
 import { Typewriter } from 'react-simple-typewriter';
 // import 'react-simple-typewriter/dist/index.css'
 import me from '../assets/Mine.jpg'
+import BeardBrand from '../assets/project_imgs/BeardBrand.png'
+import BellRoy from '../assets/project_imgs/BellRoy.png'
+import WestSide from '../assets/project_imgs/WestSide.png'
 
 const Home = () => {
   // Sample project data for featured projects
   const featuredProjects = [
     {
       id: 1,
-      title: 'E-commerce Website Redesign',
-      category: 'Web Design',
-      image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80',
-      description: 'Complete redesign of an e-commerce platform focusing on user experience and conversion optimization.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Figma']
+      title: 'BeardBrand',
+      category: 'E-commerce',
+      image: BeardBrand,
+      description: 'Complete redesign of an e-commerce platform of BERADBRAND focusing on user experience and conversion optimization.',
+      technologies: ['JavaScript', 'Bootstrap5']
     },
     {
       id: 2,
-      title: 'Mobile Banking App',
-      category: 'Mobile App',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80',
-      description: 'A secure and user-friendly mobile banking application with advanced features and intuitive interface.',
-      technologies: ['React Native', 'Firebase', 'Redux', 'Sketch']
+      title: 'WestSide',
+      category: 'Single Page Application',
+      image: WestSide,
+      description: 'Developed a partial clone of the WestSide platform using React, replicating most key features and design elements.',
+      technologies: ['React', 'React-Bootstrap']
     },
     {
       id: 3,
-      title: 'Corporate Brand Identity',
-      category: 'Branding',
-      image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80',
-      description: 'Complete brand identity design including logo, color palette, typography, and brand guidelines.',
-      technologies: ['Adobe Illustrator', 'Adobe Photoshop', 'InDesign']
+      title: 'BellRoy',
+      category: 'E-commerce',
+      image: BellRoy,
+      description: 'Recreated core design and functionality of the WestSide platform using React, focusing on layout, user flow, and responsive UI components.',
+      technologies: ['JavaScript', 'Bootstrap5']
     },
   ];
 
@@ -141,7 +144,7 @@ const Home = () => {
                 <p className="project-description">{project.description}</p>
                 <div className="project-tech">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
+                    <span key={index} className="tech-tag">{tech}&nbsp;&nbsp;</span>
                   ))}
                 </div>
               </div>

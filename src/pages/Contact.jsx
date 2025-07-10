@@ -24,15 +24,15 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.send(
-      'YOUR_SERVICE_ID',        // 🔁 Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID',       // 🔁 Replace with your EmailJS template ID
+      'service_3bz7j6q',         // ✅ Your actual EmailJS service ID
+      'template_p9zujcj',         // 🔁 Replace with your created template ID
       {
         from_name: formData.name,
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
       },
-      'YOUR_PUBLIC_KEY'         // 🔁 Replace with your EmailJS public key
+      'GNMFSVhj2b2kbCb1l'     // 🔁 Replace with your public key from EmailJS dashboard
     ).then(
       (result) => {
         console.log('Email sent:', result.text);
